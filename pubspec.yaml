@@ -1,6 +1,6 @@
 name: delusion_script
 description: 解析 dw 脚本文件
-version: 0.0.1
+version: 0.0.3
 homepage: https://github.com/nooblesone/delusion_script
 
 environment:

@@ -23,11 +23,11 @@ parsingRegisterRoleStatements(String dw, List<Statements> retStatementsList) {
   var roleName = decodeDwEscape(cuttingFromMinus(statementsList[1])[1]);
   Map<String, String> files = {};
   List<String> filesList =
-      getSquareBrackets(statementsList[2]).trim().split('\n');
+      getSquareBrackets(statementsList[2]).trim().split('\r\n');
   for (var elem in filesList) {
     // 切分之前去除缩进空格
     var elemList = cuttingFromMinus(elem.trimLeft());
-    files[decodeDwEscape(elemList[0])] = decodeDwEscape(elem[1]);
+    files[decodeDwEscape(elemList[0])] = decodeDwEscape(elemList[1]);
   }
   retStatementsList.add(RegisterRoleStatements(
     roleId: roleId,
@@ -52,11 +52,11 @@ parsingRegisterCgStatements(String dw, List<Statements> retStatementsList) {
   var cgId = decodeDwEscape(cuttingFromMinus(statementsList[0])[1]);
   Map<String, String> files = {};
   List<String> filesList =
-      getSquareBrackets(statementsList[1]).trim().split('\n');
+      getSquareBrackets(statementsList[1]).trim().split('\r\n');
   for (var elem in filesList) {
     // 切分之前去除缩进空格
     var elemList = cuttingFromMinus(elem.trimLeft());
-    files[decodeDwEscape(elemList[0])] = decodeDwEscape(elem[1]);
+    files[decodeDwEscape(elemList[0])] = decodeDwEscape(elemList[1]);
   }
   retStatementsList.add(RegisterCgStatements(cgId: cgId, files: files));
 }

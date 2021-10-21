@@ -3,6 +3,7 @@ import 'package:delusion_script/delusion_script.dart';
 
 void main() async {
   List<Statements> statementsList = dwParsing.parsingDwStatements(dw);
+  print('');
 }
 
 String dw = r'''

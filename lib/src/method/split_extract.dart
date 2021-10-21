@@ -8,9 +8,9 @@ String getSquareBrackets(String dw) {
   return dw.substring(dw.indexOf('[') + 1, dw.lastIndexOf(']'));
 }
 
-/// 根据 ',\n' 拆分原语句
+/// 根据 ',' 拆分原语句
 List<String> cuttingFromComma(String dw) {
-  List<String> dwList = dw.split(',\n');
+  List<String> dwList = dw.split(',');
 
   if (dwList.last.isEmpty) {
     dwList.removeLast();
@@ -20,9 +20,9 @@ List<String> cuttingFromComma(String dw) {
   return dwList;
 }
 
-/// 根据 ';\n' 拆分原语句
+/// 根据 ';' 拆分原语句
 List<String> cuttingFromSemicolon(String dw) {
-  List<String> dwList = dw.split(';\n');
+  List<String> dwList = dw.split(';');
 
   if (dwList.last.isEmpty) {
     dwList.removeLast();
@@ -31,6 +31,8 @@ List<String> cuttingFromSemicolon(String dw) {
   }
   return dwList;
 }
+
+/// 根据 ''' 拆分原语句
 
 /// 根据 '-' 拆分原语句
 List<String> cuttingFromMinus(String dw) {

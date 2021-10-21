@@ -1,12 +1,3 @@
-# delusion_script 剧本解析器
-
-此插件用来和 **flutter_avg_engine** 配合使用，用于解析 delusion script 剧本脚本
-
-现在引擎正处于开发阶段，此插件也仅用于个人测试，请不要下载应用
-
-使用方法：
-
-```dart
 import 'package:delusion_script/delusion_script.dart' as dwParsing;
 import 'package:delusion_script/delusion_script.dart';
 
@@ -44,6 +35,3 @@ String dw = r'''
 @bgm-stop-背景音乐.mp3;
 #jump-文件.dw;
 ''';
-```
-
-有关脚本语法的说明请等待继续开发。

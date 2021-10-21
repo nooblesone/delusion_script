@@ -1,20 +1,27 @@
-# delusion_script 剧本解析器
-
-此插件用来和 **flutter_avg_engine** 配合使用，用于解析 delusion script 剧本脚本
-
-现在引擎正处于开发阶段，此插件也仅用于个人测试，请不要下载应用
-
-使用方法：
-
-```dart
-import 'package:delusion_script/delusion_script.dart' as dwParsing;
-import 'package:delusion_script/delusion_script.dart';
-
-void main() async {
-  List<Statements> statementsList = dwParsing.parsingDwStatements(dw);
-}
-
-String dw = r'''
+String dwConfigFile = r'''
+$register-role={
+    id-人物1id,
+    name-人物姓名1,
+    files-[
+        差分1id-人物1表情1.png
+        差分2id-人物1表情2.png
+        差分3id-人物1表情3.png
+        差分4id-人物1表情4.png
+        差分5id-人物1表情5.png
+        差分6id-人物1表情6.png
+    ],
+};
+$register-cg={
+    id-CG1id,
+    files-[
+        差分1id-CG差分1.png
+        差分2id-CG差分2.png
+        差分3id-CG差分3.png
+        差分4id-CG差分4.png
+    ],
+};
+''';
+String dwFile = r'''
 @background-背景1.png;
 @bgm-start-背景音乐.mp3;
 @entrance-人物1id-差分2id-location;
@@ -44,6 +51,3 @@ String dw = r'''
 @bgm-stop-背景音乐.mp3;
 #jump-文件.dw;
 ''';
-```
-
-有关脚本语法的说明请等待继续开发。

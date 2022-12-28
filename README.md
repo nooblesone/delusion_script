@@ -1,4 +1,12 @@
+# 本项目已经弃用!
+
+
+
 # delusion_script 剧本解析器
+
+
+
+
 
 此插件用来和 **delusion_world_avg** 配合使用，用于解析 delusion script 剧本脚本
 
